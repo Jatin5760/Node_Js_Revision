@@ -1,0 +1,5 @@
+Node.js ek JavaScript runtime environment hai jo server-side aur networking applications banane ke liye use hota hai. Yeh fast, scalable aur lightweight hai, kyunki yeh Chrome's V8 JavaScript engine par based hai. Node.js asynchronous programming ko support karta hai, jo non-blocking I/O operations ke liye perfect hai. Iska single-threaded event loop architecture high-performance applications banane mein madad karta hai, jaise chat applications, real-time collaboration tools, aur APIs. Iska npm (Node Package Manager) ek powerful tool hai jo developers ko libraries aur modules ka use karne ki suvidha deta hai. Agar aapko fast aur scalable backend chahiye, toh Node.js ek accha choice hai.
+
+
+
+Node js is a runtime environment that allows js to run outside the browser built on chrome v8 enigne, which is an opensource powerful broswer engine

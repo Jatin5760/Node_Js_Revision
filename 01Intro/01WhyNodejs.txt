@@ -3,3 +3,14 @@ Node.js ek JavaScript runtime environment hai jo server-side aur networking appl
 
 
 Node js is a runtime environment that allows js to run outside the browser built on chrome v8 enigne, which is an opensource powerful broswer engine
+
+
+
+Hamare pass ek Package hota hai yani bana banaya code hota hai jo download karna padega hame
+with command 
+'npm i -g nodemon'  
+npm matlab node package manager install globally the nodemon package
+
+'nodemon index.js'
+
+isse run ho jayega

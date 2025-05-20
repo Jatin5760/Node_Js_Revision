@@ -28,7 +28,7 @@ const append_file = async (fileName, appended_data) => {
   console.log("File appended successfully");
 };
 
-append_file('App.jsx', 'This is a sample file created by Node.js');
+//append_file('App.jsx', 'This is a sample file created by Node.js');
 
 
 // Create a folder
@@ -36,4 +36,17 @@ const create_folder = async (folderName) => {
   await mkdir(folderName);
   console.log("Folder created successfully");
 };
-create_folder('components');
+//create_folder('components');
+//create_folder('public');
+//create_folder('assets');
+
+
+
+// Folder inside a folder in recursive way
+const create_folder_in_folder = async (folderName) => {
+  await mkdir(folderName, { recursive: true });
+  console.log("Folder created successfully");
+};
+create_folder_in_folder('src/assets/images');
+create_folder_in_folder('src/Python');
+

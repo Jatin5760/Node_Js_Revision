@@ -3,7 +3,7 @@ console.log("File Handling in Node.js");
 // This is a promise-based version of the fs module
 // It is used to read and write files in Node.js
 
-import { readFile, writeFile } from "fs/promises";
+import { readFile, writeFile, appendFile, mkdir } from "fs/promises";
 
 const read_file = async (fileName) => {
   const data = await readFile(fileName, "utf-8");
@@ -18,5 +18,22 @@ const write_file = async (fileName, data) => {
   console.log("File written successfully");
 };
 
-write_file('ai.py', 'This is a sample file created by Node.js');
-write_file('App.jsx', 'This is a react file created by Node.js');
+//write_file('ai.py', 'This is a sample file created by Node.js');
+//write_file('App.jsx', 'This is a react file created by Node.js');
+
+
+// This function is used to append data to a file
+const append_file = async (fileName, appended_data) => {
+  await appendFile(fileName, appended_data, { flag: "a" });
+  console.log("File appended successfully");
+};
+
+append_file('App.jsx', 'This is a sample file created by Node.js');
+
+
+// Create a folder
+const create_folder = async (folderName) => {
+  await mkdir(folderName);
+  console.log("Folder created successfully");
+};
+create_folder('components');

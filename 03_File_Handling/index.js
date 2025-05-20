@@ -17,3 +17,6 @@ const write_file = async (fileName, data) => {
   await writeFile(fileName, data);
   console.log("File written successfully");
 };
+
+write_file('ai.py', 'This is a sample file created by Node.js');
+write_file('App.jsx', 'This is a react file created by Node.js');

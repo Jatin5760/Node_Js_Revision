@@ -1,1 +1,1 @@
-Node.js with projects and E-Commerce API with full authentication
+This is a sample file created by Node.js

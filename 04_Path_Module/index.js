@@ -22,3 +22,12 @@ if (extName === '.pdf') {
 else{
     console.log('This is not a PDF file');
 }
+
+// Base name
+// Base name is the name of the file without the path
+// and without the extension
+// For example, if the file is /path/index.js, the base name is index.js
+
+const baseName = path.basename('resume.pdf');
+console.log('Base name = ', baseName);
+

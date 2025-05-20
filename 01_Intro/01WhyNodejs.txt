@@ -14,3 +14,6 @@ npm matlab node package manager install globally the nodemon package
 'nodemon index.js'
 
 isse run ho jayega
+
+
+'npm init' ek command hai jo ek naya `package.json` file banata hai. Yeh file project ke metadata ko store karti hai, jaise project ka naam, version, description, aur dependencies. Yeh command project ko organize aur manage karne mein madad karti hai.

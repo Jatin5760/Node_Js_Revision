@@ -18,6 +18,8 @@ app.get('/', (req, res)=>{
 
 // This is a route to handle form submission
 app.post('/form-submit', (req, res) => {
+
+    // req.body will contain the form data
     console.log(req.body);
     res.json({
         message: "Form submitted successfully",

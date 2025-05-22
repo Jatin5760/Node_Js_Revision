@@ -20,6 +20,7 @@ app.get('/', (req, res)=>{
 app.post('/form-submit', (req, res) => {
 
     // req.body will contain the form data
+    // req.body par hi sara express tika hua hai
     console.log(req.body);
     res.json({
         message: "Form submitted successfully",

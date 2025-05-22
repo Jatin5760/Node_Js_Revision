@@ -12,18 +12,29 @@
     </style>
 </head>
 <body>
+
+    <!-- Syntax of EJS
+    <%= %> = This is used to print the value -->
     <h1>We are learning EJS, My name is <%=name%> and my age is <%=age%> </h1>    
 
+    <!-- <ul>
+        <li>
+            Smartphone Name = <%= products[0].name%>
+        </li>
+        <li>
+            Smartphone Name = <%= products[1].name%>
+        </li>
+        <li>
+            Smartphone Name = <%= products[2].name%>
+        </li>
+    </ul> -->
+
     <ul>
-        <li>
-            <%= products[0].name%>
-        </li>
-        <li>
-            <%= products[1].name%>
-        </li>
-        <li>
-            <%= products[2].name%>
-        </li>
-    </ul>
+        <% for(let i=0; i<products.length; i++){ %>
+            <li>
+                Smartphone Name = <%= products[i].name%>
+                Price = <%= products[i].price%>
+            </li>
+        <% } %>
 </body>
 </html>

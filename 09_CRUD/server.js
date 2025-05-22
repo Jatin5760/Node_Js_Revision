@@ -23,6 +23,10 @@ app.delete('/delete', (req, res) => {
     app.delete('This is a DELETE request');
 });
 
+app.get('/read', (req, res) => {
+    app.get('This is a GET request');
+});
+
 
 const port = 3000;  
 app.listen(port, () => { 

@@ -9,13 +9,15 @@ const products = [
 
 // Send a response
 app.get("/", (req, res) => {
+  // Send a JSON response
+  //   res.json({
+  //     message: "Welcome to my API",
+  //     products: products,
+  //     success: true,
+  //   });
 
-// Send a JSON response    
-  res.json({
-    message: "Welcome to my API",
-    products: products,
-    success: true,
-  });
+  // Send an HTML response
+  res.send("<h1>Welcome to my API</h1>");
 });
 
 const port = 1000;

@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 const app = express();
 
 const products = [
@@ -17,10 +18,21 @@ app.get("/", (req, res) => {
   //   });
 
   // Send an HTML response
-  res.send("<h1>Welcome to my API</h1>");
+//   res.send("<h1>Welcome to my API</h1>");
+
+const dir = path.resolve();
+//console.log("My Path:",dir);
+
+const url = path.join(dir, "index.html");
+console.log("My URL:",url);
+
+res.sendFile(url);
+
+
+// res.sendFile()
 });
 
 const port = 1000;
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });

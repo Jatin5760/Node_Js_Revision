@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import {shortUrl} from "./Controllers/url.js"
 
 const app = express();
 
@@ -21,6 +22,10 @@ mongoose
 app.get('/', (req, res) => {
   res.render("index.ejs", {shortUrl: null});
 });
+
+
+// Sorting url logic
+app.post('/short', shortUrl);
 
 
 

@@ -1,7 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import path from "path";
-import {User} from './Models/user.js'; 
+import { User } from "./Models/user.js";
+
+
 const app = express();
 
 app.use(express.static(path.join(path.resolve(), "public")));
@@ -22,6 +24,8 @@ mongoose
     console.log(err);
   });
 
+
+  
 // MVC: Model-View-Controller
 app.get("/", (req, res) => {
   res.render("index.ejs");
@@ -32,18 +36,18 @@ app.post("/form-submit", async (req, res) => {
   //console.log(req.body);
 
   try {
-    let user = await User.create(req.body)
+    let user = await User.create(req.body);
     res.json({
-        message: "Form submitted successfully, User created",
-        success: true,
-      });
+      message: "Form submitted successfully, User created",
+      newUser: user,
+      success: true,
+    });
   } catch (error) {
-    
+    res.json({
+      message: "Form submitted successfully, User not created",
+    });
   }
- 
 });
-
-
 
 
 const port = 3000;

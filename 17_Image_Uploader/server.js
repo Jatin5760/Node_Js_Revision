@@ -29,6 +29,13 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { Url: null });
 });
 
+const imageSchema = new mongoose.Schema({
+  filename: String,
+  public_id: String,
+  imgUrl: String,
+});
+
+const file = mongoose.model("cloudinary", imageSchema);
 
 // Set up multer for file uploads
 const storage = multer.diskStorage({
@@ -44,12 +51,28 @@ const upload = multer({ storage: storage });
 
 // Upload file to cloudinary
 app.post("/upload", upload.single("file"), async (req, res) => {
-  const file = req.file.path;
-  res.json({
-    message: "File uploaded successfully",
+  const filePath = req.file.path;
+
+  const cloudinaryResponse = await cloudinary.uploader.upload(filePath, {
+    folder: "NodeJs_Uploads",
   });
-  // req.file is the `avatar` file
-  // req.body will hold the text fields, if there were any
+
+  const db = await file.create({
+    filename: file.originalname,
+    public_id: cloudinaryResponse.public_id,
+    imgUrl: cloudinaryResponse.secure_url,
+  });
+
+  res.render("index.ejs", {
+    Url: cloudinaryResponse.secure_url,
+  });
+
+//   res.json({
+//     message: "File uploaded successfully",
+//     cloudinaryResponse,
+//   });
+
+
 });
 
 const port = 3000;

@@ -18,6 +18,11 @@ export const shortUrl = async (req, res) => {
 
   console.log("Shortened URL:", newUrl);
 
-  res.render("index.ejs", { shortUrl: newUrl });
+  res.render("index.ejs", { shortUrl: shortUrl });
   
 };
+
+
+export const getOriginalUrl = async (req, res) => {
+    
+}

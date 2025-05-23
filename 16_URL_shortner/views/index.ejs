@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>URL_Shortner Project</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -15,7 +21,7 @@
       </form>
       <% if (shortUrl) { %>
       <p>
-        Short URL : <a href="<%= shortUrl %>" target="_blank"></a>
+        Short URL : <a href= "<%= shortUrl %>" target="_blank"/>
         <%= shortUrl %>
       </p>
       <%} %>

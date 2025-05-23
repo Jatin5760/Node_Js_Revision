@@ -29,6 +29,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { Url: null });
 });
 
+
 // Set up multer for file uploads
 const storage = multer.diskStorage({
   destination: "./public/uploads",

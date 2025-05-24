@@ -14,4 +14,9 @@ export const newContact = async (req, res) => {
         phone,
         type,
     });
+
+    res.json({
+        message: "Contact created successfully",
+        success: true,
+    })
 }

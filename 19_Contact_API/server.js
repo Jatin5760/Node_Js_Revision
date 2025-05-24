@@ -1,8 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
-import { User } from "./Models/User.js";
-import bcrypt from "bcryptjs";
+import {register} from './Controllers/user.js'
 
 const app = express();
 app.use(bodyParser.json());
@@ -19,34 +18,7 @@ app.get("/", (req, res) => {
 // @api method : POST
 // @api endpoint : /api/register
 
-app.post("/api/user/register", async (req, res) => {
-  const { name, email, password } = req.body;
-
-  if (name == "" || email == "" || password == "")
-    return res.json({ message: "Please fill all the fields!" });
-
-  let user = await User.findOne({ email });
-  if (user) {
-    return res.json({
-      message: "User already exists with this email!",
-      success: false,
-    });
-  }
-
-  const hashPassword = await bcrypt.hash(password, 10);
-
-  user = await User.create({
-    name,
-    email,
-    password:hashPassword,
-  });
-
-  res.json({
-    message: "User Created Successfully",
-    user,
-    success: true,
-  });
-});
+app.post("/api/user/register", register);
 
 // Connecting to MongoDB
 mongoose

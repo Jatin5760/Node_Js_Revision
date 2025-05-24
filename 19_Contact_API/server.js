@@ -2,24 +2,23 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import userRouter from "./Routes/user.js";
+import contactRouter from "./Routes/contact.js";
 
 const app = express();
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
 // User Routes - start with /api its a good practice
 app.use("/api/user", userRouter);
 
-
+// Contact Router
+app.use("/api/contact", contactRouter);
 
 // Home Route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to the Contact API - Working fine!" });
 });
-
-
 
 // Connecting to MongoDB
 mongoose

@@ -1,5 +1,6 @@
 import { User } from "../Models/User.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 export const register = async (req, res) => {
   const { name, email, password } = req.body;
@@ -30,28 +31,34 @@ export const register = async (req, res) => {
   });
 };
 
-
-export const login  = async (req, res) => {
-  const {email, password} = req.body;
+export const login = async (req, res) => {
+  const { email, password } = req.body;
 
   if (email == "" || password == "")
     return res.json({ message: "Please fill all the fields!" });
 
   const user = await User.findOne({ email });
 
-  if(!user) {
-    return res.json({ message: "User not found with this email!", success: false });
+  if (!user) {
+    return res.json({
+      message: "User not found with this email!",
+      success: false,
+    });
   }
 
   const validpass = await bcrypt.compare(password, user.password);
 
-  if(!validpass) {
+  if (!validpass) {
     return res.json({ message: "Invalid Password!", success: false });
   }
 
-  res.json({
-    message: `Welcome, ${user.name}!`,
-    success: true,
+  const token = jwt.sign({ userId: user._id }, "!@#$%^&*()", {
+    expiresIn: "1d",
   });
 
-}
+  res.json({
+    message: `Welcome, ${user.name}!`,
+    token,
+    success: true,
+  });
+};

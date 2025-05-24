@@ -8,7 +8,7 @@ export const newContact = async (req, res) => {
         return res.json({message: "Please fill all the fields", success: false});
     }
 
-    let saveContact = await CoContact({
+    let saveContact = await Contact.create({
         name,
         email,
         phone,

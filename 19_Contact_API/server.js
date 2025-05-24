@@ -6,6 +6,19 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+// User Routes - start with /api its a good practice
+// @api name : user register
+// @api method : POST
+// @api endpoint : /api/register
+
+app.post("/api/user/register", (req,res) =>{
+    const {name, email, password} = req.body;
+    
+})
+
+
+
 // Connecting to MongoDB
 mongoose
   .connect(

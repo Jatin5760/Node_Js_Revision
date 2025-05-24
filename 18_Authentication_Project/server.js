@@ -5,6 +5,7 @@ import { v2 as cloudinary } from "cloudinary";
 import path from "path";
 
 const app = express();
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Configuration of Cloudinary
@@ -26,7 +27,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // Render Login file
-app.get("/", (req, res) => {
+app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
 

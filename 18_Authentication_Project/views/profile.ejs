@@ -15,14 +15,16 @@
     </style>
 </head>
 <body class="bg-black text-light">
-    <div class="container my-5 p-3" style="width: 600px; border-radius: 10px; border: 2px solid white;">
+    <div class="container my-5 p-3 text-center">
         <h1 class="text-center">Welcome, <%= user.name%></h1>
         <h3 class="text-center"><%= user.email%></h3>
         <div class="my-5">
             <img src="<%= user.imgUrl%>" alt=""
-            style="width: 150px; border-radius: 100%; border: 2px solid yellow;">
+            style="width: 250px; height: 250px; border-radius: 100%; border: 2px solid yellow;">
         </div>
-        
+        <div class="my-5">
+            <a href="/login" class="btn btn-danger mx-3">Logout</a>
+        </div>
     </div>
 </body>
 </html>

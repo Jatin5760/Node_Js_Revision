@@ -11,7 +11,7 @@ export const isAuthenticated = async (req, res, next) => {
   }
   console.log("check token", token);
 
-  const decoded = jwt.verify(token, "!@#$%^&*()");
+  const decoded = jwt.verify(token, process.env.JWT);
 
   console.log("token data", decoded);
 

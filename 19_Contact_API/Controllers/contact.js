@@ -115,7 +115,7 @@ export const getContactByUserId = async (req, res) => {
     }
   
     res.json({
-      message: "Contact fetched successfully",
+      message: "User Specific Contact fetched successfully",
       userContact,
       success: true,
     });

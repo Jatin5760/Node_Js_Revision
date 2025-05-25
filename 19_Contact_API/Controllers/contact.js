@@ -102,3 +102,22 @@ export const getContactById = async (req, res) => {
     success: true,
   });
 };
+
+
+
+// Get contact by user id
+export const getContactByUserId = async (req, res) => {
+    const id = req.params.id;
+  
+    const userContact = await Contact.find({ user: id });
+    if (!userContact) {
+      return res.json({ message: "Contact not found", success: false });
+    }
+  
+    res.json({
+      message: "Contact fetched successfully",
+      userContact,
+      success: true,
+    });
+  };
+

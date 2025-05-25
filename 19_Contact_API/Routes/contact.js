@@ -1,6 +1,13 @@
 import express from "express";
-import { deleteContactById, getAllContacts, getContactById, newContact, updateContactById } from "../Controllers/contact.js";
+import {
+  deleteContactById,
+  getAllContacts,
+  getContactById,
+  newContact,
+  updateContactById,
+} from "../Controllers/contact.js";
 import { isAuthenticated } from "../Middlewares/Auth.js";
+
 const router = express.Router();
 
 // New Contact
@@ -31,6 +38,6 @@ router.put("/:id", updateContactById);
 // @api name : delete contact by id
 // @api method : DELETE
 // @api endpoint : /api/contact/delete/:id
-router.delete('/:id', deleteContactById)
+router.delete("/:id", deleteContactById);
 
 export default router;

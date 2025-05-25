@@ -32,12 +32,12 @@ router.get("/:id", getContactById);
 // @api name : update contact by id
 // @api method : PUT
 // @api endpoint : /api/contact/update/:id
-router.put("/:id", updateContactById);
+router.put("/:id", isAuthenticated, updateContactById);
 
 // Delete contact by id
 // @api name : delete contact by id
 // @api method : DELETE
 // @api endpoint : /api/contact/delete/:id
-router.delete("/:id", deleteContactById);
+router.delete("/:id", isAuthenticated, deleteContactById);
 
 export default router;

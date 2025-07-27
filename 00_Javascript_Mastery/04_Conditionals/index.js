@@ -38,3 +38,8 @@ switch (day) {
     default:
         break;
 }
+
+
+
+// While Loop
+while()

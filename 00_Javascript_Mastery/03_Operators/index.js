@@ -13,18 +13,33 @@ let b = 20;
 
 // Assignment Operator
 let x = 10;
-console.log(x);
+// console.log(x);
 
 let sum = 20;
 sum += x;
-console.log(sum);
+// console.log(sum);
 
 
 
 // Comparision Operator
 let y = 10;
 let z ='10';
-console.log(y == z);
-console.log(y === z);
+// console.log(y == z);
+// console.log(y === z);
+// console.log(y != z);
+
+
+
+// Logical operators - && || !
+// And , or , not
+
+
+// Ternary Operator - ()?():()
+// condition ? true output : false output
+let marks = 45;
+const result = (marks > 40)?("You passed"):("You failed");
+console.log(result);
+
+
 
 

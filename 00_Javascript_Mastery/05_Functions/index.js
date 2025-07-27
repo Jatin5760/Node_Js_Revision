@@ -12,3 +12,5 @@ function sum1(a,b) {
 let ans = sum1(10,20)
 console.log(ans);
 
+
+

@@ -41,5 +41,23 @@ const result = (marks > 40)?("You passed"):("You failed");
 console.log(result);
 
 
+// Template Literal
+let Name = 'Jatin'
+let income = 600000
+let pincode = 466445
+
+console.log(
+    "Your name is = " + ' " '+
+    Name + ' " '+
+    " and your income is = " +
+    income +
+    " and pincode = " +
+    pincode
+);
+
+console.log(`Your name is "${Name}" and your income is '${income}' and pincode is "${pincode}"`);
+
+
+
 
 

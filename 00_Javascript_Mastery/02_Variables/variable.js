@@ -22,3 +22,13 @@
 // Javascript types are dynamic, meaning you can change the type of a variable at any time.
 var x = 'jatin'
 console.log(typeof(x));
+
+
+// Hosting - declare karne se pehle hi variable ko access kar sakte hain.
+console.log(y);
+var y = 10;
+
+
+const c_ID = 8819
+// c_ID = 3 we can't update const value
+console.log(c_ID);

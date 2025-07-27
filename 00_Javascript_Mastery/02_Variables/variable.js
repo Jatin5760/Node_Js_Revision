@@ -20,3 +20,5 @@
 // 10) Function [function() { return 'Hello'; }]
 
 // Javascript types are dynamic, meaning you can change the type of a variable at any time.
+var x = 'jatin'
+console.log(typeof(x));

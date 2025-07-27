@@ -19,3 +19,12 @@ let sum = 20;
 sum += x;
 console.log(sum);
 
+
+
+// Comparision Operator
+let y = 10;
+let z ='10';
+console.log(y == z);
+console.log(y === z);
+
+

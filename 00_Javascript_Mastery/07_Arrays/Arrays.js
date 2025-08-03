@@ -42,7 +42,9 @@ let arr4 = [1,2,3,4]
 let element = arr4.splice(2,1,'a')
 // console.log(arr4);
 
-// Slice
+// Slice : It returns a shallow copy of portion of an array
+let arr5 = [1,2,3,4,5]
+let Slice = arr5.slice()
 
 
 

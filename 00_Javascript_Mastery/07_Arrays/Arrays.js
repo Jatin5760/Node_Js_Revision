@@ -44,7 +44,23 @@ let element = arr4.splice(2,1,'a')
 
 // Slice : It returns a shallow copy of portion of an array
 let arr5 = [1,2,3,4,5]
-let Slice = arr5.slice()
+let Slice = arr5.slice(1,4)
+// console.log(Slice);
+
+// Sort
+let arr6 = [4,1,5,8,2,3]
+// console.log(arr6.sort((a, b)=> b - a)); // Decreasing Order
+// console.log(arr6.sort((a, b)=> a - b)); // Increasing Order
+
+// FindIndex
+//console.log(arr6.findIndex((el)=> el>2));
+
+// from()
+let str = "web dev"
+let arr7 = Array.from(str)
+console.log(arr7);
+
+
 
 
 

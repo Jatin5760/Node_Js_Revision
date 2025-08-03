@@ -26,21 +26,23 @@ let found = array.find((element) => element > 2)
 // console.log(arr.includes(30)); // True
 // console.log(arr.includes(50)); // False
 
-// Concat
+// Concat : Used to merge the array
 let arr1 = [10, 20]
 let arr2 = [30, 40]
 let merged = arr1.concat(arr2)
 // console.log(merged);
 
-// Join
+// Join : Array ko string mai convert kar sakte hai with a seperator also.
 let arr3 = ["Jatin", "SDE", "Amazon", "Microsoft"]
 let result = arr3.join(" : ")
 // console.log(result);
 
-// Splice
+// Splice : Add ya remove karta hai element of array mai se
 let arr4 = [1,2,3,4]
-let element = arr.splice(2,1,'a')
-console.log(arr4);
+let element = arr4.splice(2,1,'a')
+// console.log(arr4);
+
+// Slice
 
 
 
